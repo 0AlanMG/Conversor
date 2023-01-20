@@ -42,9 +42,30 @@ public class Main {
 						currencyConversionOptions[0]
 						);
 				
+				double amount = 0;
+				
+				boolean valid = false;
+				while(!valid) {
+					
+					/*Cantidad de Dinero*/
+					Object amountObj = JOptionPane.showInputDialog(null, 
+											"Ingresa la cantidad de dinero que deseas convertir:", 
+											"Cantidad de Dinero", 
+											JOptionPane.QUESTION_MESSAGE
+										);
+					
+					if(amountObj.toString().matches("[0-9.]+")) {
+						amount = Double.valueOf(amountObj.toString());
+						valid = true;
+					}else {
+						/*Error*/
+						JOptionPane.showMessageDialog(null, "Por favor ingrese un numero valido.", "Aviso", JOptionPane.ERROR_MESSAGE);
+					}
+				}
+
 				switch (currencyConversion.toString()) {
 				case "De MXN (Peso) a USD (Dolar)": {
-					System.out.println("De MXN A USD");
+					System.out.println("De MXN A USD " + amount);
 				}
 				default:
 					throw new IllegalArgumentException();
@@ -55,7 +76,9 @@ public class Main {
 			}
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.out.println(e);
+			/*Error*/
+			JOptionPane.showMessageDialog(null, "Ha ocurrido un error inesperado, por favor intente mas tarde.", "Aviso", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 }
