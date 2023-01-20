@@ -1,5 +1,7 @@
 package mx.conversor.main;
 
+import java.text.DecimalFormat;
+
 import javax.swing.JOptionPane;
 
 public class Main {
@@ -62,13 +64,121 @@ public class Main {
 						JOptionPane.showMessageDialog(null, "Por favor ingrese un numero valido.", "Aviso", JOptionPane.ERROR_MESSAGE);
 					}
 				}
+				
+				DecimalFormat decimalFormat = new DecimalFormat("#.0000");
+				
+				double onemxntousd = 0.05299;
+				double onemxntoeur = 0.04877;
+				double onemxntogpb = 0.04278;
+				double onemxntojpy = 6.86512;
+				double onemxntokrw = 65.23340;
+				
+				double conversionValue = 0;
+				
 
 				switch (currencyConversion.toString()) {
 				case "De MXN (Peso) a USD (Dolar)": {
-					System.out.println("De MXN A USD " + amount);
+					conversionValue = amount * onemxntousd;
+					
+					JOptionPane.showMessageDialog(null, 
+							"Tienes $" + decimalFormat.format(conversionValue) + " Dolares", 
+							"Conversión", 
+							JOptionPane.INFORMATION_MESSAGE
+							);
+					break;
+				}
+				case "De MXN (Peso) a EUR (Euro)": {
+					conversionValue = amount * onemxntoeur;
+					
+					JOptionPane.showMessageDialog(null, 
+							"Tienes €" + decimalFormat.format(conversionValue) + " Euros", 
+							"Conversión", 
+							JOptionPane.INFORMATION_MESSAGE
+							);
+					break;
+				}
+				case "De MXN (Peso) a GBP (Libra Esterlina)": {
+					conversionValue = amount * onemxntogpb;
+					
+					JOptionPane.showMessageDialog(null, 
+							"Tienes £" + decimalFormat.format(conversionValue) + " Libras Esterlinas", 
+							"Conversión", 
+							JOptionPane.INFORMATION_MESSAGE
+							);
+					break;
+				}
+				case "De MXN (Peso) a JPY (Yen Japonés)": {
+					conversionValue = amount * onemxntojpy;
+					
+					JOptionPane.showMessageDialog(null, 
+							"Tienes ¥" + decimalFormat.format(conversionValue) + " Yenes", 
+							"Conversión", 
+							JOptionPane.INFORMATION_MESSAGE
+							);
+					break;
+				}
+				case "De MXN (Peso) a KRW (Won Surcoreano)": {
+					conversionValue = amount * onemxntokrw;
+					
+					JOptionPane.showMessageDialog(null, 
+							"Tienes ₩" + decimalFormat.format(conversionValue) + " Wones", 
+							"Conversión", 
+							JOptionPane.INFORMATION_MESSAGE
+							);
+					break;
+				}
+				case "De USD (Dolar) a MXN (Peso)": {
+					conversionValue = amount / onemxntousd;
+					
+					JOptionPane.showMessageDialog(null, 
+							"Tienes $" + decimalFormat.format(conversionValue) + " Pesos", 
+							"Conversión", 
+							JOptionPane.INFORMATION_MESSAGE
+							);
+					break;
+				}
+				case "De EUR (Euro) a MXN (Peso)": {
+					conversionValue = amount / onemxntoeur;
+					
+					JOptionPane.showMessageDialog(null, 
+							"Tienes $" + decimalFormat.format(conversionValue) + " Pesos", 
+							"Conversión", 
+							JOptionPane.INFORMATION_MESSAGE
+							);
+					break;
+				}
+				case "De GBP (Libra Esterlina) a MXN (Peso)": {
+					conversionValue = amount / onemxntogpb;
+					
+					JOptionPane.showMessageDialog(null, 
+							"Tienes $" + decimalFormat.format(conversionValue) + " Pesos", 
+							"Conversión", 
+							JOptionPane.INFORMATION_MESSAGE
+							);
+					break;
+				}
+				case "De JPY (Yen Japonés) a MXN (Peso)": {
+					conversionValue = amount / onemxntojpy;
+					
+					JOptionPane.showMessageDialog(null, 
+							"Tienes $" + decimalFormat.format(conversionValue) + " Pesos", 
+							"Conversión", 
+							JOptionPane.INFORMATION_MESSAGE
+							);
+					break;
+				}
+				case "De KRW (Won Surcoreano) a MXN (Peso)": {
+					conversionValue = amount / onemxntokrw;
+					
+					JOptionPane.showMessageDialog(null, 
+							"Tienes $" + decimalFormat.format(conversionValue) + " Pesos", 
+							"Conversión", 
+							JOptionPane.INFORMATION_MESSAGE
+							);
+					break;
 				}
 				default:
-					throw new IllegalArgumentException();
+					break;
 				}
 				
 			}else if(converter.toString() == "Conversor de Temperatura") {
