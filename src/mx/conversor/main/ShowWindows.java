@@ -38,8 +38,8 @@ public class ShowWindows {
 				"De ºC (Celsius) a K (Kelvin)", 
 				"De ºF (Fahrenheit) a ºC (Celsius)", 
 				"De ºF (Fahrenheit) a K (Kelvin)", 
-				"De K (Kelvin) a KRW ºC (Celsius)", 
-				"De K (Kelvin) a MXN ºF (Fahrenheit)"
+				"De K (Kelvin) a ºC (Celsius)", 
+				"De K (Kelvin) a ºF (Fahrenheit)"
 				};
 		
 		Object[] conversionOptions = null;
@@ -67,19 +67,10 @@ public class ShowWindows {
 				JOptionPane.QUESTION_MESSAGE 
 				);
 	}
-	
-	
-	
-	
-	
-	
-	
 
-
-	public static void showConversionValue(String conversionValue) {
-		/*Resultado de Conversion*/
+	public static void showConversionValue(String message) {
 		JOptionPane.showMessageDialog(null, 
-				conversionValue, 
+				message, 
 				"Conversión", 
 				JOptionPane.INFORMATION_MESSAGE
 				);

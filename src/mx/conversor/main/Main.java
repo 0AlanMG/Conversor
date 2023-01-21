@@ -1,7 +1,5 @@
 package mx.conversor.main;
 
-import java.text.DecimalFormat;
-
 import javax.swing.JOptionPane;
 
 import mx.conversor.model.Currencies;
@@ -16,7 +14,9 @@ public class Main {
 			Object conversion = null;
 			double inputNumber = 0;
 			boolean inputNumberValid = false;
-			Object responseInputNumber = null;
+			Object inputNumberResponse = null;
+			Object closeProgramResponse = null;
+			
 			
 			Object converter = ShowWindows.showMainMenu();
 			
@@ -32,14 +32,14 @@ public class Main {
 						
 						while(!inputNumberValid) {
 							
-							responseInputNumber = ShowWindows.showInputNumber("Cantidad de Dinero", "Ingresa la cantidad de dinero que deseas convertir: "); 
-							if(responseInputNumber == null) {
+							inputNumberResponse = ShowWindows.showInputNumber("Cantidad de Dinero", "Ingresa la cantidad de dinero que deseas convertir: "); 
+							if(inputNumberResponse == null) {
 								inputNumberValid = false;
 								break;
 							}
 
-							if(responseInputNumber.toString().matches("[0-9.]+")) {
-								inputNumber = Double.valueOf(responseInputNumber.toString());
+							if(inputNumberResponse.toString().matches("[0-9.]+")) {
+								inputNumber = Double.valueOf(inputNumberResponse.toString());
 								inputNumberValid = true;
 							}else {
 								ShowWindows.showError("Por favor ingresa un numero valido.");
@@ -47,6 +47,16 @@ public class Main {
 						}
 						if(!inputNumberValid)
 							break;
+
+						ShowWindows.showConversionValue(Currencies.convert(conversion.toString(), inputNumber));
+						
+						inputNumberValid = false;
+						inputNumber = 0;
+						
+						closeProgramResponse = ShowWindows.showQuestionCloseProgram(); 
+						if(Integer.valueOf(closeProgramResponse.toString()) != 0) {
+							closeProgram = true;
+						}
 					}
 					
 				}else if(converter.toString() == "Conversor de Temperatura") {
@@ -59,14 +69,14 @@ public class Main {
 						
 						while(!inputNumberValid) {
 							
-							responseInputNumber = ShowWindows.showInputNumber("Numero de Grados", "Ingresa el numero de grados que deseas convertir: "); 
-							if(responseInputNumber == null) {
+							inputNumberResponse = ShowWindows.showInputNumber("Numero de Grados", "Ingresa el numero de grados que deseas convertir: "); 
+							if(inputNumberResponse == null) {
 								inputNumberValid = false;
 								break;
 							}
 
-							if(responseInputNumber.toString().matches("[0-9.]+")) {
-								inputNumber = Double.valueOf(responseInputNumber.toString());
+							if(inputNumberResponse.toString().matches("[0-9.]+")) {
+								inputNumber = Double.valueOf(inputNumberResponse.toString());
 								inputNumberValid = true;
 							}else {
 								ShowWindows.showError("Por favor ingresa un numero de grados valido.");
@@ -74,6 +84,16 @@ public class Main {
 						}
 						if(!inputNumberValid)
 							break;
+						
+						ShowWindows.showConversionValue(Temperatures.convert(conversion.toString(), inputNumber));
+						
+						inputNumberValid = false;
+						inputNumber = 0;
+						
+						closeProgramResponse = ShowWindows.showQuestionCloseProgram(); 
+						if(Integer.valueOf(closeProgramResponse.toString()) != 0) {
+							closeProgram = true;
+						}
 					}
 					
 				}
@@ -81,71 +101,6 @@ public class Main {
 			}
 			
 			ShowWindows.showCloseProgram();
-			
-			
-			
-			/*
-				
-				
-					
-					
-						/*Obtención y Validacion de la Conversión
-						
-						
-						/*Obtención y Validacion de la Cantidad a convertir
-						
-						
-						
-						DecimalFormat decimalFormat = new DecimalFormat("#.0000");
-						ShowWindows.showConversionValue(decimalFormat.format(Currencies.convert(currencyConversion.toString(), amount)));
-						
-						Object closeProgramResponse = ShowWindows.showQuestionCloseProgram(); 
-						if(Integer.valueOf(closeProgramResponse.toString()) != 0) {
-							closeProgram = true;
-						}
-					}
-					
-				}
-					
-					while(!closeProgram) {
-						/*Obtención y Validacion de la Conversión
-						Object temperatureConversion = ShowWindows.showTemperatureConversion();
-						if(temperatureConversion == null) 
-							break;
-						
-						/*Obtención y Validacion de los grados de temperatura a convertir
-						double degrees = 0;
-						boolean degreesValid = false;
-						while(!degreesValid) {
-							
-							Object responseDegrees = ShowWindows.showTemperatureDegree(); 
-							if(responseDegrees == null) {
-								degreesValid = false;
-								break;
-							}
-
-							if(responseDegrees.toString().matches("[0-9.]+")) {
-								degrees = Double.valueOf(responseDegrees.toString());
-								degreesValid = true;
-							}else {
-								ShowWindows.showError("Por favor ingrese un numero de grados valido.");
-							}
-						}
-						if(!degreesValid)
-							break;
-						
-						DecimalFormat decimalFormat = new DecimalFormat("#.0000");
-						ShowWindows.showConversionValue(decimalFormat.format(Temperatures.convert(temperatureConversion.toString(), degrees)));
-						
-						Object closeProgramResponse = ShowWindows.showQuestionCloseProgram(); 
-						if(Integer.valueOf(closeProgramResponse.toString()) != 0) {
-							closeProgram = true;
-						}
-					}
-				}
-			}
-			
-			*/
 			
 		} catch (Exception e) {
 			ShowWindows.showError("Ha ocurrido un error inesperado, por favor intente mas tarde.");
