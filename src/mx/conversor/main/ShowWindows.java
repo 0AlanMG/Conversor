@@ -59,6 +59,21 @@ public class ShowWindows {
 				JOptionPane.INFORMATION_MESSAGE
 				);
 	}
+
+	public static Object showQuestionCloseProgram() {
+		return JOptionPane.showConfirmDialog(null, 
+				"¿Desea continuar?", 
+				"Selecione una opción", 
+				JOptionPane.YES_NO_CANCEL_OPTION);
+	}
+	
+	public static void showCloseProgram() {
+		JOptionPane.showMessageDialog(null, 
+				"Programa terminado", 
+				"Mensaje", 
+				JOptionPane.INFORMATION_MESSAGE 
+				);
+	}
 	
 	public static void showError(String message) {
 		/*Error*/
