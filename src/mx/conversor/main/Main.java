@@ -184,7 +184,11 @@ public class Main {
 						break;
 					}
 					
-					Object response = JOptionPane.showConfirmDialog(null, "¿Desea continuar?");
+					Object response = JOptionPane.showConfirmDialog(null, 
+							"¿Desea continuar?", 
+							"Selecione una opción", 
+							JOptionPane.YES_NO_CANCEL_OPTION);
+					
 					if(Integer.valueOf(response.toString()) > 0) {
 						closeProgram = true;
 					}
@@ -193,6 +197,12 @@ public class Main {
 					System.out.println("B");
 				}
 			}
+			
+			JOptionPane.showMessageDialog(null, 
+					"Programa terminado", 
+					"Mensaje", 
+					JOptionPane.INFORMATION_MESSAGE
+					);
 			
 		} catch (Exception e) {
 			System.out.println(e);
