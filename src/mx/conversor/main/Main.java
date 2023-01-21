@@ -4,6 +4,8 @@ import java.text.DecimalFormat;
 
 import javax.swing.JOptionPane;
 
+import mx.conversor.model.Currencies;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -19,11 +21,13 @@ public class Main {
 				
 				if(converter.toString() == "Conversor de Moneda") {
 					
+					/*Obtención y Validacion de la Conversión*/
 					Object currencyConversion = ShowWindows.showCurrencyConversion();
 					
 					if(currencyConversion == null) 
 						break;
 
+					/*Obtención y Validacion de la Cantidad a convertir*/
 					double amount = 0;
 					boolean amountValid = false;
 					while(!amountValid) {
@@ -45,123 +49,8 @@ public class Main {
 					if(!amountValid)
 						break;
 					
-					
-					
 					DecimalFormat decimalFormat = new DecimalFormat("#.0000");
-					
-					double onemxntousd = 0.05299;
-					double onemxntoeur = 0.04877;
-					double onemxntogpb = 0.04278;
-					double onemxntojpy = 6.86512;
-					double onemxntokrw = 65.23340;
-					
-					double conversionValue = 0;
-					
-
-					switch (currencyConversion.toString()) {
-					case "De MXN (Peso) a USD (Dolar)": {
-						conversionValue = amount * onemxntousd;
-						
-						JOptionPane.showMessageDialog(null, 
-								"Tienes $" + decimalFormat.format(conversionValue) + " Dolares", 
-								"Conversión", 
-								JOptionPane.INFORMATION_MESSAGE
-								);
-						break;
-					}
-					case "De MXN (Peso) a EUR (Euro)": {
-						conversionValue = amount * onemxntoeur;
-						
-						JOptionPane.showMessageDialog(null, 
-								"Tienes €" + decimalFormat.format(conversionValue) + " Euros", 
-								"Conversión", 
-								JOptionPane.INFORMATION_MESSAGE
-								);
-						break;
-					}
-					case "De MXN (Peso) a GBP (Libra Esterlina)": {
-						conversionValue = amount * onemxntogpb;
-						
-						JOptionPane.showMessageDialog(null, 
-								"Tienes £" + decimalFormat.format(conversionValue) + " Libras Esterlinas", 
-								"Conversión", 
-								JOptionPane.INFORMATION_MESSAGE
-								);
-						break;
-					}
-					case "De MXN (Peso) a JPY (Yen Japonés)": {
-						conversionValue = amount * onemxntojpy;
-						
-						JOptionPane.showMessageDialog(null, 
-								"Tienes ¥" + decimalFormat.format(conversionValue) + " Yenes", 
-								"Conversión", 
-								JOptionPane.INFORMATION_MESSAGE
-								);
-						break;
-					}
-					case "De MXN (Peso) a KRW (Won Surcoreano)": {
-						conversionValue = amount * onemxntokrw;
-						
-						JOptionPane.showMessageDialog(null, 
-								"Tienes ₩" + decimalFormat.format(conversionValue) + " Wones", 
-								"Conversión", 
-								JOptionPane.INFORMATION_MESSAGE
-								);
-						break;
-					}
-					case "De USD (Dolar) a MXN (Peso)": {
-						conversionValue = amount / onemxntousd;
-						
-						JOptionPane.showMessageDialog(null, 
-								"Tienes $" + decimalFormat.format(conversionValue) + " Pesos", 
-								"Conversión", 
-								JOptionPane.INFORMATION_MESSAGE
-								);
-						break;
-					}
-					case "De EUR (Euro) a MXN (Peso)": {
-						conversionValue = amount / onemxntoeur;
-						
-						JOptionPane.showMessageDialog(null, 
-								"Tienes $" + decimalFormat.format(conversionValue) + " Pesos", 
-								"Conversión", 
-								JOptionPane.INFORMATION_MESSAGE
-								);
-						break;
-					}
-					case "De GBP (Libra Esterlina) a MXN (Peso)": {
-						conversionValue = amount / onemxntogpb;
-						
-						JOptionPane.showMessageDialog(null, 
-								"Tienes $" + decimalFormat.format(conversionValue) + " Pesos", 
-								"Conversión", 
-								JOptionPane.INFORMATION_MESSAGE
-								);
-						break;
-					}
-					case "De JPY (Yen Japonés) a MXN (Peso)": {
-						conversionValue = amount / onemxntojpy;
-						
-						JOptionPane.showMessageDialog(null, 
-								"Tienes $" + decimalFormat.format(conversionValue) + " Pesos", 
-								"Conversión", 
-								JOptionPane.INFORMATION_MESSAGE
-								);
-						break;
-					}
-					case "De KRW (Won Surcoreano) a MXN (Peso)": {
-						conversionValue = amount / onemxntokrw;
-						
-						JOptionPane.showMessageDialog(null, 
-								"Tienes $" + decimalFormat.format(conversionValue) + " Pesos", 
-								"Conversión", 
-								JOptionPane.INFORMATION_MESSAGE
-								);
-						break;
-					}
-					default:
-						break;
-					}
+					ShowWindows.showConversionValue(decimalFormat.format(Currencies.convert(currencyConversion.toString(), amount)));
 					
 					Object response = JOptionPane.showConfirmDialog(null, 
 							"¿Desea continuar?", 

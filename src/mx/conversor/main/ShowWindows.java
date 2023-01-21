@@ -51,6 +51,15 @@ public class ShowWindows {
 				);
 	}
 
+	public static void showConversionValue(String conversionValue) {
+		/*Resultado de Conversion*/
+		JOptionPane.showMessageDialog(null, 
+				"Tienes $ " + conversionValue + " Dolares", 
+				"Conversión", 
+				JOptionPane.INFORMATION_MESSAGE
+				);
+	}
+	
 	public static void showError(String message) {
 		/*Error*/
 		JOptionPane.showMessageDialog(null, message, "Aviso", JOptionPane.ERROR_MESSAGE);
