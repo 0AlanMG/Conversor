@@ -13,19 +13,47 @@ public class Main {
 		try {
 			boolean closeProgram = false;
 			
+			Object conversion = null;
+			
 			Object converter = ShowWindows.showMainMenu();
 			
-			if(converter != null) {
+			if(converter != null) { 
 				
 				if(converter.toString() == "Conversor de Moneda") {
 					
 					while(!closeProgram) {
-						/*Obtención y Validacion de la Conversión*/
-						Object currencyConversion = ShowWindows.showCurrencyConversion();
-						if(currencyConversion == null) 
-							break;
 						
-						/*Obtención y Validacion de la Cantidad a convertir*/
+						conversion = ShowWindows.showConversion("currency", "Monedas", "Elije la moneda a la que deseas convertir tu dinero");
+						if(conversion == null) 
+							break;
+					}
+					
+				}else if(converter.toString() == "Conversor de Temperatura") {
+					
+					while(!closeProgram) {
+						
+						conversion = ShowWindows.showConversion("temperature", "Temperaturas", "Elige la conversión de temperatura que deseas");
+						if(conversion == null) 
+							break;
+					}
+					
+				}
+				
+			}
+			
+			ShowWindows.showCloseProgram();
+			
+			
+			
+			/*
+				
+				
+					
+					
+						/*Obtención y Validacion de la Conversión
+						
+						
+						/*Obtención y Validacion de la Cantidad a convertir
 						double amount = 0;
 						boolean amountValid = false;
 						while(!amountValid) {
@@ -55,15 +83,15 @@ public class Main {
 						}
 					}
 					
-				}else if(converter.toString() == "Conversor de Temperatura") {
+				}
 					
 					while(!closeProgram) {
-						/*Obtención y Validacion de la Conversión*/
+						/*Obtención y Validacion de la Conversión
 						Object temperatureConversion = ShowWindows.showTemperatureConversion();
 						if(temperatureConversion == null) 
 							break;
 						
-						/*Obtención y Validacion de los grados de temperatura a convertir*/
+						/*Obtención y Validacion de los grados de temperatura a convertir
 						double degrees = 0;
 						boolean degreesValid = false;
 						while(!degreesValid) {
@@ -95,7 +123,7 @@ public class Main {
 				}
 			}
 			
-			ShowWindows.showCloseProgram();
+			*/
 			
 		} catch (Exception e) {
 			ShowWindows.showError("Ha ocurrido un error inesperado, por favor intente mas tarde.");

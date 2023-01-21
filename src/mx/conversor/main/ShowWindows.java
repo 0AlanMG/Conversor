@@ -17,7 +17,7 @@ public class ShowWindows {
 				);
 	}
 
-	public static Object showCurrencyConversion() {
+	public static Object showConversion(String typeConversion, String title, String message) {
 		/*Menu de Monedas*/
 		Object[] currencyConversionOptions = { 
 				"De MXN (Peso) a USD (Dolar)", 
@@ -32,17 +32,6 @@ public class ShowWindows {
 				"De KRW (Won Surcoreano) a MXN (Peso)",
 				};
 		
-		return JOptionPane.showInputDialog(null, 
-				"Elije la moneda a la que deseas convertir tu dinero", 
-				"Monedas", 
-				JOptionPane.QUESTION_MESSAGE, 
-				null, 
-				currencyConversionOptions, 
-				currencyConversionOptions[0]
-				);
-	}
-	
-	public static Object showTemperatureConversion() {
 		/*Menu de Temperaturas*/
 		Object[] temperatureConversionOptions = { 
 				"De ºC (Celsius) a ºF (Fahrenheit)", 
@@ -53,15 +42,33 @@ public class ShowWindows {
 				"De K (Kelvin) a MXN ºF (Fahrenheit)"
 				};
 		
+		Object[] conversionOptions = null;
+		
+		if(typeConversion == "currency") {
+			conversionOptions = currencyConversionOptions;
+		}else if(typeConversion == "temperature") {
+			conversionOptions = temperatureConversionOptions;
+		}
+		
 		return JOptionPane.showInputDialog(null, 
-				"Elije la conversión de temperatura que deseas", 
-				"Temperaturas", 
+				message, 
+				title, 
 				JOptionPane.QUESTION_MESSAGE, 
 				null, 
-				temperatureConversionOptions, 
-				temperatureConversionOptions[0]
+				conversionOptions, 
+				conversionOptions[0]
 				);
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	public static Object showAmountOfMoney() {
 		/*Cantidad de Dinero*/
