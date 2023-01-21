@@ -84,7 +84,7 @@ public class ShowWindows {
 	public static void showConversionValue(String conversionValue) {
 		/*Resultado de Conversion*/
 		JOptionPane.showMessageDialog(null, 
-				"Tienes $ " + conversionValue + " Dolares", 
+				conversionValue, 
 				"Conversión", 
 				JOptionPane.INFORMATION_MESSAGE
 				);

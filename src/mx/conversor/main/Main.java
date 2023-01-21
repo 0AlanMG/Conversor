@@ -5,6 +5,7 @@ import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 
 import mx.conversor.model.Currencies;
+import mx.conversor.model.Temperatures;
 
 public class Main {
 
@@ -83,7 +84,13 @@ public class Main {
 						if(!degreesValid)
 							break;
 						
-						closeProgram = true;
+						DecimalFormat decimalFormat = new DecimalFormat("#.0000");
+						ShowWindows.showConversionValue(decimalFormat.format(Temperatures.convert(temperatureConversion.toString(), degrees)));
+						
+						Object closeProgramResponse = ShowWindows.showQuestionCloseProgram(); 
+						if(Integer.valueOf(closeProgramResponse.toString()) != 0) {
+							closeProgram = true;
+						}
 					}
 				}
 			}
