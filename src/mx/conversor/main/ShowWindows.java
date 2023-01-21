@@ -41,6 +41,27 @@ public class ShowWindows {
 				currencyConversionOptions[0]
 				);
 	}
+	
+	public static Object showTemperatureConversion() {
+		/*Menu de Temperaturas*/
+		Object[] temperatureConversionOptions = { 
+				"De ºC (Celsius) a ºF (Fahrenheit)", 
+				"De ºC (Celsius) a K (Kelvin)", 
+				"De ºF (Fahrenheit) a ºC (Celsius)", 
+				"De ºF (Fahrenheit) a K (Kelvin)", 
+				"De K (Kelvin) a KRW ºC (Celsius)", 
+				"De K (Kelvin) a MXN ºF (Fahrenheit)"
+				};
+		
+		return JOptionPane.showInputDialog(null, 
+				"Elije la conversión de temperatura que deseas", 
+				"Temperaturas", 
+				JOptionPane.QUESTION_MESSAGE, 
+				null, 
+				temperatureConversionOptions, 
+				temperatureConversionOptions[0]
+				);
+	}
 
 	public static Object showAmountOfMoney() {
 		/*Cantidad de Dinero*/

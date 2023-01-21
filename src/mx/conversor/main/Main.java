@@ -57,6 +57,12 @@ public class Main {
 				}else if(converter.toString() == "Conversor de Temperatura") {
 					
 					while(!closeProgram) {
+						/*Obtención y Validacion de la Conversión*/
+						Object temperatureConversion = ShowWindows.showTemperatureConversion();
+						if(temperatureConversion == null) 
+							break;
+						
+						
 						System.out.println("Conversor de Temperatura");
 						closeProgram = true;
 					}
