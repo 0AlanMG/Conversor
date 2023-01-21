@@ -14,6 +14,9 @@ public class Main {
 			boolean closeProgram = false;
 			
 			Object conversion = null;
+			double inputNumber = 0;
+			boolean inputNumberValid = false;
+			Object responseInputNumber = null;
 			
 			Object converter = ShowWindows.showMainMenu();
 			
@@ -26,6 +29,24 @@ public class Main {
 						conversion = ShowWindows.showConversion("currency", "Monedas", "Elije la moneda a la que deseas convertir tu dinero");
 						if(conversion == null) 
 							break;
+						
+						while(!inputNumberValid) {
+							
+							responseInputNumber = ShowWindows.showInputNumber("Cantidad de Dinero", "Ingresa la cantidad de dinero que deseas convertir: "); 
+							if(responseInputNumber == null) {
+								inputNumberValid = false;
+								break;
+							}
+
+							if(responseInputNumber.toString().matches("[0-9.]+")) {
+								inputNumber = Double.valueOf(responseInputNumber.toString());
+								inputNumberValid = true;
+							}else {
+								ShowWindows.showError("Por favor ingresa un numero valido.");
+							}
+						}
+						if(!inputNumberValid)
+							break;
 					}
 					
 				}else if(converter.toString() == "Conversor de Temperatura") {
@@ -34,6 +55,24 @@ public class Main {
 						
 						conversion = ShowWindows.showConversion("temperature", "Temperaturas", "Elige la conversión de temperatura que deseas");
 						if(conversion == null) 
+							break;
+						
+						while(!inputNumberValid) {
+							
+							responseInputNumber = ShowWindows.showInputNumber("Numero de Grados", "Ingresa el numero de grados que deseas convertir: "); 
+							if(responseInputNumber == null) {
+								inputNumberValid = false;
+								break;
+							}
+
+							if(responseInputNumber.toString().matches("[0-9.]+")) {
+								inputNumber = Double.valueOf(responseInputNumber.toString());
+								inputNumberValid = true;
+							}else {
+								ShowWindows.showError("Por favor ingresa un numero de grados valido.");
+							}
+						}
+						if(!inputNumberValid)
 							break;
 					}
 					
@@ -54,25 +93,8 @@ public class Main {
 						
 						
 						/*Obtención y Validacion de la Cantidad a convertir
-						double amount = 0;
-						boolean amountValid = false;
-						while(!amountValid) {
-							
-							Object responseAmount = ShowWindows.showAmountOfMoney(); 
-							if(responseAmount == null) {
-								amountValid = false;
-								break;
-							}
-
-							if(responseAmount.toString().matches("[0-9.]+")) {
-								amount = Double.valueOf(responseAmount.toString());
-								amountValid = true;
-							}else {
-								ShowWindows.showError("Por favor ingrese un numero valido.");
-							}
-						}
-						if(!amountValid)
-							break;
+						
+						
 						
 						DecimalFormat decimalFormat = new DecimalFormat("#.0000");
 						ShowWindows.showConversionValue(decimalFormat.format(Currencies.convert(currencyConversion.toString(), amount)));

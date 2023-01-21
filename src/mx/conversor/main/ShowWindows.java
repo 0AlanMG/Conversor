@@ -60,8 +60,13 @@ public class ShowWindows {
 				);
 	}
 	
-	
-	
+	public static Object showInputNumber(String title, String message) {
+		return JOptionPane.showInputDialog(null, 
+				message, 
+				title, 
+				JOptionPane.QUESTION_MESSAGE 
+				);
+	}
 	
 	
 	
@@ -70,23 +75,6 @@ public class ShowWindows {
 	
 	
 
-	public static Object showAmountOfMoney() {
-		/*Cantidad de Dinero*/
-		return JOptionPane.showInputDialog(null, 
-				"Ingresa la cantidad de dinero que deseas convertir:", 
-				"Cantidad de Dinero", 
-				JOptionPane.QUESTION_MESSAGE 
-				);
-	}
-	
-	public static Object showTemperatureDegree() {
-		/*Cantidad de Dinero*/
-		return JOptionPane.showInputDialog(null, 
-				"Ingresa la cantidad de dinero que deseas convertir:", 
-				"Cantidad de Dinero", 
-				JOptionPane.QUESTION_MESSAGE 
-				);
-	}
 
 	public static void showConversionValue(String conversionValue) {
 		/*Resultado de Conversion*/
