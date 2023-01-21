@@ -11,51 +11,58 @@ public class Main {
 	public static void main(String[] args) {
 		try {
 			boolean closeProgram = false;
-			while(!closeProgram) {
-				
-				Object converter = ShowWindows.showMainMenu(); 
-				if(converter == null)
-					break;
+			
+			Object converter = ShowWindows.showMainMenu();
+			
+			if(converter != null) {
 				
 				if(converter.toString() == "Conversor de Moneda") {
-					/*Obtención y Validacion de la Conversión*/
-					Object currencyConversion = ShowWindows.showCurrencyConversion();
-					if(currencyConversion == null) 
-						break;
-
-					/*Obtención y Validacion de la Cantidad a convertir*/
-					double amount = 0;
-					boolean amountValid = false;
-					while(!amountValid) {
-						
-						Object responseAmount = ShowWindows.showAmountOfMoney(); 
-						if(responseAmount == null) {
-							amountValid = false;
+					
+					while(!closeProgram) {
+						/*Obtención y Validacion de la Conversión*/
+						Object currencyConversion = ShowWindows.showCurrencyConversion();
+						if(currencyConversion == null) 
 							break;
-						}
+						
+						/*Obtención y Validacion de la Cantidad a convertir*/
+						double amount = 0;
+						boolean amountValid = false;
+						while(!amountValid) {
+							
+							Object responseAmount = ShowWindows.showAmountOfMoney(); 
+							if(responseAmount == null) {
+								amountValid = false;
+								break;
+							}
 
-						if(responseAmount.toString().matches("[0-9.]+")) {
-							amount = Double.valueOf(responseAmount.toString());
-							amountValid = true;
-						}else {
-							ShowWindows.showError("Por favor ingrese un numero valido.");
+							if(responseAmount.toString().matches("[0-9.]+")) {
+								amount = Double.valueOf(responseAmount.toString());
+								amountValid = true;
+							}else {
+								ShowWindows.showError("Por favor ingrese un numero valido.");
+							}
 						}
-					}
-					if(!amountValid)
-						break;
-					
-					DecimalFormat decimalFormat = new DecimalFormat("#.0000");
-					ShowWindows.showConversionValue(decimalFormat.format(Currencies.convert(currencyConversion.toString(), amount)));
-					
-					Object closeProgramResponse = ShowWindows.showQuestionCloseProgram(); 
-					if(Integer.valueOf(closeProgramResponse.toString()) != 0) {
-						closeProgram = true;
+						if(!amountValid)
+							break;
+						
+						DecimalFormat decimalFormat = new DecimalFormat("#.0000");
+						ShowWindows.showConversionValue(decimalFormat.format(Currencies.convert(currencyConversion.toString(), amount)));
+						
+						Object closeProgramResponse = ShowWindows.showQuestionCloseProgram(); 
+						if(Integer.valueOf(closeProgramResponse.toString()) != 0) {
+							closeProgram = true;
+						}
 					}
 					
 				}else if(converter.toString() == "Conversor de Temperatura") {
-					System.out.println("B");
+					
+					while(!closeProgram) {
+						System.out.println("Conversor de Temperatura");
+						closeProgram = true;
+					}
 				}
 			}
+			
 			ShowWindows.showCloseProgram();
 			
 		} catch (Exception e) {
