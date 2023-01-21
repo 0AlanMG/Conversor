@@ -62,8 +62,27 @@ public class Main {
 						if(temperatureConversion == null) 
 							break;
 						
+						/*Obtención y Validacion de los grados de temperatura a convertir*/
+						double degrees = 0;
+						boolean degreesValid = false;
+						while(!degreesValid) {
+							
+							Object responseDegrees = ShowWindows.showTemperatureDegree(); 
+							if(responseDegrees == null) {
+								degreesValid = false;
+								break;
+							}
+
+							if(responseDegrees.toString().matches("[0-9.]+")) {
+								degrees = Double.valueOf(responseDegrees.toString());
+								degreesValid = true;
+							}else {
+								ShowWindows.showError("Por favor ingrese un numero de grados valido.");
+							}
+						}
+						if(!degreesValid)
+							break;
 						
-						System.out.println("Conversor de Temperatura");
 						closeProgram = true;
 					}
 				}

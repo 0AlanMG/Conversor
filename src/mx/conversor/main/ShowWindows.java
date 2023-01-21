@@ -71,6 +71,15 @@ public class ShowWindows {
 				JOptionPane.QUESTION_MESSAGE 
 				);
 	}
+	
+	public static Object showTemperatureDegree() {
+		/*Cantidad de Dinero*/
+		return JOptionPane.showInputDialog(null, 
+				"Ingresa la cantidad de dinero que deseas convertir:", 
+				"Cantidad de Dinero", 
+				JOptionPane.QUESTION_MESSAGE 
+				);
+	}
 
 	public static void showConversionValue(String conversionValue) {
 		/*Resultado de Conversion*/
