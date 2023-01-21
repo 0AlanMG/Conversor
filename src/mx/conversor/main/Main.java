@@ -23,26 +23,29 @@ public class Main {
 					
 					if(currencyConversion == null) 
 						break;
-					
+
 					double amount = 0;
-					boolean valid = false;
-					while(!valid) {
+					boolean amountValid = false;
+					while(!amountValid) {
 						
-						/*Cantidad de Dinero*/
-						Object amountObj = JOptionPane.showInputDialog(null, 
-												"Ingresa la cantidad de dinero que deseas convertir:", 
-												"Cantidad de Dinero", 
-												JOptionPane.QUESTION_MESSAGE
-											);
+						Object responseAmount = ShowWindows.showAmountOfMoney(); 
 						
-						if(amountObj.toString().matches("[0-9.]+")) {
-							amount = Double.valueOf(amountObj.toString());
-							valid = true;
+						if(responseAmount == null) {
+							amountValid = false;
+							break;
+						}
+
+						if(responseAmount.toString().matches("[0-9.]+")) {
+							amount = Double.valueOf(responseAmount.toString());
+							amountValid = true;
 						}else {
-							/*Error*/
-							JOptionPane.showMessageDialog(null, "Por favor ingrese un numero valido.", "Aviso", JOptionPane.ERROR_MESSAGE);
+							ShowWindows.showError("Por favor ingrese un numero valido.");
 						}
 					}
+					if(!amountValid)
+						break;
+					
+					
 					
 					DecimalFormat decimalFormat = new DecimalFormat("#.0000");
 					
@@ -182,8 +185,7 @@ public class Main {
 			
 		} catch (Exception e) {
 			System.out.println(e);
-			/*Error*/
-			JOptionPane.showMessageDialog(null, "Ha ocurrido un error inesperado, por favor intente mas tarde.", "Aviso", JOptionPane.ERROR_MESSAGE);
+			ShowWindows.showError("Ha ocurrido un error inesperado, por favor intente mas tarde.");
 		}
 	}
 }

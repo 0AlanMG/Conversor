@@ -41,4 +41,18 @@ public class ShowWindows {
 				currencyConversionOptions[0]
 				);
 	}
+
+	public static Object showAmountOfMoney() {
+		/*Cantidad de Dinero*/
+		return JOptionPane.showInputDialog(null, 
+				"Ingresa la cantidad de dinero que deseas convertir:", 
+				"Cantidad de Dinero", 
+				JOptionPane.QUESTION_MESSAGE 
+				);
+	}
+
+	public static void showError(String message) {
+		/*Error*/
+		JOptionPane.showMessageDialog(null, message, "Aviso", JOptionPane.ERROR_MESSAGE);
+	}
 }
