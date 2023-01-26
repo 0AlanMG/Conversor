@@ -52,7 +52,7 @@
 
 <h3>Pantallas</h3>
 
-<h4 align="center">Menu</h4>
+<h4 align="center">Menú</h4>
 <p align="center"><img src="https://i.imgur.com/fRbLGFD.png" title="Menu" /></p>
 
 </br>
@@ -94,4 +94,10 @@
     <li>De ºC (Celsius) a ºF (Fahrenheit) y a K (Kelvin)</li>
     <li>De ºF (Fahrenheit) a ºC (Celsius) y a K (Kelvin)</li>
     <li>De K (Kelvin) a ºC (Celsius) y a ºF (Fahrenheit)</li>
+</ul>
+
+<h2>Tecnologías</h2>
+<ul>
+    <li>Java 8</li>
+    <li>Java Swing</li>
 </ul>
