@@ -44,3 +44,6 @@
     El conversor de Divisas permite la conversión de (MXN) pesos mexicanos a otras divisas y viceversa.
     Y el de Temperaturas permite la conversión de tres diferentes tipos de unidades de medida (ºC Celsius, ºF Fahrenheit y K Kelvin) entre sí.
 </p>
+
+<h2>Estado</h2>
+<p>:white_check_mark:Finalizado y liberado:white_check_mark:</p>
