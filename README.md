@@ -104,7 +104,7 @@
 
 <h2>Desarrollador</h2>
 <a href="https://github.com/0AlanMG">
-    <img src="https://i.imgur.com/qeE44zQ.jpg" width=175px>
+    <img src="https://i.imgur.com/qeE44zQ.jpg" width="130px">
     <br>
-    <p>Alan Montes de Oca Garcia</p>
+    <p>Alan Montes de Oca</p>
 </a>
