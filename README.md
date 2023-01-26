@@ -67,8 +67,6 @@
 </br>
 </br>
 </br>
-</br>
-</br>
 
 <h4 align="center">Temperaturas</h4>
 <p align="center">
