@@ -1,8 +1,6 @@
-<div style="text-align:center;">
-    <h1>Conversor</h1>
-    <p>Conversor de Divisas y Temperaturas.</p>
-    <p>Proyecto para ONE – Oracle Next Education.</p>
-</div>
+<h1 style="text-align:center;">Conversor</h1>
+<p>Conversor de Divisas y Temperaturas.</p>
+<p>Proyecto para ONE – Oracle Next Education.</p>
 
 <div style="display:flex; justify-content:space-between; margin:1.5rem 0;">
     <img src="https://i.imgur.com/SuRyfAK.png" title="Badge Status - Liberado" />
