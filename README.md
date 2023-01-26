@@ -74,3 +74,24 @@
     <img src="https://i.imgur.com/PZItluC.png" title="Numero de Grados" width="30%" />
     <img align="right" src="https://i.imgur.com/gsLAFpA.png" title="Resultado" width="30%" />
 </p>
+
+</br>
+</br>
+</br>
+
+<h3>:hammer:Funcionalidades</h3>
+<h4>Conversor de Divisas</h4>
+<ul>
+    <li>De MXN (Peso Mexicano) a USD (Dolar)</li>
+    <li>De MXN (Peso Mexicano) a EUR (Euro)</li>
+    <li>De MXN (Peso Mexicano) a GBP (Libra Esterlina)</li>
+    <li>De MXN (Peso Mexicano) a JPY (Yen Japonés)</li>
+    <li>De MXN (Peso Mexicano) a KRW (Won Surcoreano)</li>
+    <li>Y de todas las divisas a MXN (Peso Mexicano)</li>
+</ul>
+<h4>Conversor de Temperaturas</h4>
+<ul>
+    <li>De ºC (Celsius) a ºF (Fahrenheit) y a K (Kelvin)</li>
+    <li>De ºF (Fahrenheit) a ºC (Celsius) y a K (Kelvin)</li>
+    <li>De K (Kelvin) a ºC (Celsius) y a ºF (Fahrenheit)</li>
+</ul>
