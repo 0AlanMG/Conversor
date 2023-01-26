@@ -101,3 +101,10 @@
     <li>Java 8</li>
     <li>Java Swing</li>
 </ul>
+
+<h2>Desarrollador</h2>
+<a href="https://github.com/0AlanMG">
+    <img src="https://i.imgur.com/qeE44zQ.jpg" width=175px>
+    <br>
+    <p>Alan Montes de Oca Garcia</p>
+</a>
