@@ -59,9 +59,9 @@
 
 <h4 align="center">Divisas</h4>
 <p align="center">
-    <img align="left" src="https://i.imgur.com/DIwcEZ4.png" title="Monedas" width="300px" />
-    <img src="https://i.imgur.com/O0tlnjG.png" title="Cantidad de Dinero" width="300px" />
-    <img align="right" src="https://i.imgur.com/bOiBvFU.png" title="Resultado" width="300px" />
+    <img align="left" src="https://i.imgur.com/DIwcEZ4.png" title="Monedas" width="30%" />
+    <img src="https://i.imgur.com/O0tlnjG.png" title="Cantidad de Dinero" width="30%" />
+    <img align="right" src="https://i.imgur.com/bOiBvFU.png" title="Resultado" width="30%" />
 </p>
 
 </br>
