@@ -1,4 +1,4 @@
-<h1 style="text-align:center;">Conversor</h1>
+<h1 align="center">Conversor</h1>
 <p>Conversor de Divisas y Temperaturas.</p>
 <p>Proyecto para ONE – Oracle Next Education.</p>
 
