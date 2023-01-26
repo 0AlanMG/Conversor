@@ -72,7 +72,7 @@
 
 <h4 align="center">Temperaturas</h4>
 <p align="center">
-    <img align="left" src="https://i.imgur.com/fgqueT2.png" title="Temperaturas" width="300px" />
-    <img src="https://i.imgur.com/PZItluC.png" title="Numero de Grados" width="300px" />
-    <img align="right" src="https://i.imgur.com/gsLAFpA.png" title="Resultado" width="300px" />
+    <img align="left" src="https://i.imgur.com/fgqueT2.png" title="Temperaturas" width="30%" />
+    <img src="https://i.imgur.com/PZItluC.png" title="Numero de Grados" width="30%" />
+    <img align="right" src="https://i.imgur.com/gsLAFpA.png" title="Resultado" width="30%" />
 </p>
