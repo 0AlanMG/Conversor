@@ -37,3 +37,10 @@
         <a href="#desarollador">Desarrollador</a>
     </li>
 </ul>
+
+<h2>Descripción</h2>
+<p>
+    Conversor de dos tipos de datos (Divisas y Temperaturas).
+    El conversor de Divisas permite la conversión de (MXN) pesos mexicanos a otras divisas y viceversa.
+    Y el de Temperaturas permite la conversión de tres diferentes tipos de unidades de medida (ºC Celsius, ºF Fahrenheit y K Kelvin) entre sí.
+</p>
