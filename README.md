@@ -6,6 +6,6 @@
 
 <p align="center">
     <img align="left" src="https://i.imgur.com/SuRyfAK.png" title="Badge Status - Liberado" />
-    <img src="https://i.imgur.com/SuRyfAK.png" title="Badge Status - Liberado" />
+    <img src="https://i.imgur.com/YONeJQW.png" title="Badge Version - v1.0.2" />
     <img align="right" src="https://i.imgur.com/1zsoueg.png" title="Badge Date - Enero 2023" />
 </p>
