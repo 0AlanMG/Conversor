@@ -47,3 +47,32 @@
 
 <h2>Estado</h2>
 <p>:white_check_mark:Finalizado y liberado:white_check_mark:</p>
+
+<h2>Características de la aplicación y demostración</h2>
+
+<h3>Pantallas</h3>
+
+<h4 align="center">Menu</h4>
+<p align="center"><img src="https://i.imgur.com/fRbLGFD.png" title="Menu" /></p>
+
+</br>
+
+<h4 align="center">Divisas</h4>
+<p align="center">
+    <img align="left" src="https://i.imgur.com/DIwcEZ4.png" title="Monedas" width="300px" />
+    <img src="https://i.imgur.com/O0tlnjG.png" title="Cantidad de Dinero" width="300px" />
+    <img align="right" src="https://i.imgur.com/bOiBvFU.png" title="Resultado" width="300px" />
+</p>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+
+<h4 align="center">Temperaturas</h4>
+<p align="center">
+    <img align="left" src="https://i.imgur.com/fgqueT2.png" title="Temperaturas" width="300px" />
+    <img src="https://i.imgur.com/PZItluC.png" title="Numero de Grados" width="300px" />
+    <img align="right" src="https://i.imgur.com/gsLAFpA.png" title="Resultado" width="300px" />
+</p>
