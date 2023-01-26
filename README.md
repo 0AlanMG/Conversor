@@ -96,7 +96,7 @@
     <li>De K (Kelvin) a ºC (Celsius) y a ºF (Fahrenheit)</li>
 </ul>
 
-<h2>Tecnologías</h2>
+<h2>Tecnologías Utilizadas</h2>
 <ul>
     <li>Java 8</li>
     <li>Java Swing</li>
